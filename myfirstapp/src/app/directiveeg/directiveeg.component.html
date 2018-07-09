@@ -1,0 +1,20 @@
+<button type='button' (click)='togglenames()'> friends charaters</button>
+<div *ngIf='togglestatus'>
+    <div *ngFor='let character of friendsCharacter;let i=index' (click)='getname(character)' appAppselectdata>
+        {{i+1}}) {{character}}
+       </div>
+    <div [ngSwitch]='name' [ngStyle]='mystyle'>
+      <div *ngSwitchCase='"monica"'>Corteny Cox</div>
+      <div *ngSwitchCase='"pheobe"'>Lisa Kudrow</div>
+      <div *ngSwitchCase='"joey"'>Matt le Blank</div>
+      <div *ngSwitchCase='"chandler"'>Mathew Perry</div>
+      <div *ngSwitchDefault>No hero seelcted</div>
+    </div>   
+    <button type='button' (click)='setstyle()'>change style</button>
+</div>
+<h2 [(ngClass)]='currentcss' >CHANGE CSS DIRECTIVE</h2>
+<button type='button' (click)='changecssclass() '>change css class</button>
+
+<h2 [style.color]='colorstatus' >Using ng model</h2>
+<input type='text' [(ngModel)]='colorstatus' >
+

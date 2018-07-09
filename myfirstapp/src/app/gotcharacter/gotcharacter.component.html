@@ -1,0 +1,15 @@
+<p>
+  gotcharacter works!
+</p>
+<ul class="list-group">
+  <li >{{gotcharacter[0]}}</li>
+  <li >{{gotcharacter[1]}}</li>
+  <li >{{gotcharacter[2]}}</li>
+  <li >{{gotcharacter[3]}}</li>
+</ul>
+<button type="button"  class='btn btn-primary' (click)='startswitch()'>change value</button>
+<button type='button' class='btn btn-danger' (click)='stopswitch()' [disabled]='stopswitchstatus' >Stop switching</button>
+<div>
+<input type="text" [(ngModel)]='heading2' [value]='heading2'>
+{{heading2}}
+</div>
